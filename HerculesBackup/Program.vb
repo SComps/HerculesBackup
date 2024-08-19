@@ -17,7 +17,7 @@ Module Program
             dasdsource = args(1)
             backupdest = args(2)
             Dim recap As String = "Backing up {0} to {1}.{2}"
-            Console.WriteLine(String.Format(recap, dasdsource, backupdest, copies))
+            Console.WriteLine(String.Format(recap, dasdsource, backupdest, ""))
             BackupTemp()
             RotateDirs()
         End If
