@@ -1,6 +1,6 @@
 # HerculesBackup
 
-Command line too to backup a hercules directory into a rotated backup directory.
+Command line tool to backup a hercules directory into a rotated backup directory.
 
 HerculesBacup <copies> <sourcedir> <destdir>
 
