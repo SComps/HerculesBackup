@@ -4,6 +4,9 @@ Command line tool to backup a hercules directory into a rotated backup directory
 
 HerculesBackup <copies> <sourcedir> <destdir>
 
+<b>NOTE</b>  This command is NOT recursive.  It backs up the files in the specified directory ONLY.
+This enables you to place your backups in a subdirectory of the source without risk of a recursive backup.
+
 <H1>Compiling in Windows</H1>
 
 Using Visual Studio 2022, clone this repository, and "build" as you would any other project.
