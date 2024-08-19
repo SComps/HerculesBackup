@@ -2,7 +2,7 @@
 
 Command line tool to backup a hercules directory into a rotated backup directory.
 
-HerculesBackup <copies> <sourcedir> <destdir>
+HerculesBackup \<copies\> \<sourcedir\> \<destdir\>
 
 <b>NOTE</b>  This command is NOT recursive.  It backs up the files in the specified directory ONLY.
 This enables you to place your backups in a subdirectory of the source without risk of a recursive backup.
