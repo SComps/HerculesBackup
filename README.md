@@ -20,9 +20,14 @@ Once you have done this, you need to clone this repo into a directory on your sy
 git clone https://github.com/SComps/HerculesBackup.git
 
 <b>cd HerculesBackup
+
 dotnet build
+
 cd HerculesBackup/bin/Debug/net8.0
-ls</b>
+
+ls
+
+</b>
 
 You should see a handful of files, one of which is HerculesBackup.  Copy ALL of the files in this directory
 into your path (or modify your path to include this).   Once you've built the software, and moved it into your path,
