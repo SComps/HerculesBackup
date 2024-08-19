@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HerculesBackup": {
+      "commandName": "Project",
+      "commandLineArgs": "12 d:/mainframe/dasd d:/mainframe/dasd/backups/backup"
+    }
+  }
+}
