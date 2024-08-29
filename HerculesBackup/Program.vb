@@ -1,6 +1,7 @@
 Imports System
 Imports System.Collections.Immutable
 Imports System.IO
+Imports System.Text
 
 Module Program
     Dim copies As Integer = 12
@@ -31,8 +32,13 @@ Module Program
         For Each f As String In dasdList
             Dim FileInfo As New DirectoryInfo(f)
             Dim baseName As String = FileInfo.Name
-            Console.WriteLine(f & " --> " & TempDest & "/" & baseName)
-            FileCopy(f, TempDest & "/" & baseName)
+            Log(TempDest, f & " --> " & TempDest & "/" & baseName)
+            Try
+                FileIO.FileSystem.CopyFile(f, TempDest & "/" & baseName)
+            Catch ex As Exception
+                Log(TempDest, "Unable to copy file" & TempDest & "/" & baseName)
+                Log(TempDest, ex.Message)
+            End Try
         Next
     End Sub
 
@@ -62,5 +68,18 @@ Module Program
         Else
             Console.WriteLine("Unable to move the temporary backup.  It doesn't exist!")
         End If
+    End Sub
+
+    Private Sub Log(Dest As String, MsgText As String)
+        Try
+            Console.WriteLine("Logging to " & Dest & "/logfile")
+            Dim fs As FileStream = File.Open(Dest & "/logfile", FileMode.Append)
+            Dim bytes As Byte() = Encoding.ASCII.GetBytes(String.Format("{0} {1}-{2}", Now.ToShortDateString, Now.ToShortTimeString, MsgText & vbCrLf))
+            fs.Write(bytes)
+            fs.Close()
+        Catch ex As Exception
+            Console.WriteLine("Could not append logfile " & Dest & "/logfile")
+            Console.WriteLine(ex.Message)
+        End Try
     End Sub
 End Module
