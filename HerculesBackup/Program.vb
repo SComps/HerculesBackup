@@ -8,7 +8,7 @@ Module Program
     Dim dasdsource As String = ""
     Dim backupdest As String = ""
     Sub Main(args As String())
-        Console.WriteLine("Hercules Backup-2024 S Johnson")
+        Console.WriteLine("Hercules Backup-2024,2025 S Johnson. westdalefarmer@gmail.com")
         If args.Count < 3 Then
             Console.WriteLine("You must specify three parameters.")
             Console.WriteLine("<copies> <source dasd dir> <backup destination>")
