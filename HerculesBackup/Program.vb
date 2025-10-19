@@ -11,11 +11,11 @@ Module Program
         Console.WriteLine("Hercules Backup-2024,2025 S Johnson. westdalefarmer@gmail.com")
         Dim msg As String =
             "You must specify exactly three parameters." & vbCrLf &
-            "HerculesBackup <copies> <source dasd dir> <backup destination>" & vbCr & vbCr &
-            "<copies> is how many numbered rotations you want." & vbCr &
-            "<source dasd dir> is the directory that contains the DASD to back up." & vbCr &
-            "<backup destination> is a directory name to store the dasd backup.  This name will" & vbCr &
-            "                     will have the rotation number appended (backupdir.1 etc)" & vbCr & vbCr
+            "HerculesBackup <copies> <source dasd dir> <backup destination>" & vbCrLf & vbCrLf &
+            "<copies> is how many numbered rotations you want." & vbCrLf &
+            "<source dasd dir> is the directory that contains the DASD to back up." & vbCrLf &
+            "<backup destination> is a directory name to store the dasd backup.  This name will" & vbCrLf &
+            "                     will have the rotation number appended (backupdir.1 etc)" & vbCrLf & vbCrLf
 
 
         If args.Count < 3 Then
