@@ -13,8 +13,9 @@ Using Visual Studio 2022, clone this repository, and "build" as you would any ot
 
 <H1>Compiling in Linux</H1>
 
-First, install the .NET 8.0 SDK.  It is beyond the scope of this document to detail the installation instructions
-for the multitude of operating systems .NET 8.0 runs on.  Please see 
+First, install the .NET 9.0 SDK.  It is beyond the scope of this document to detail the installation instructions
+for the multitude of operating systems .NET 9.0 runs on. Debian and many others have dotnet-sdk packages in their repositories.
+Please see 
 
 https://learn.microsoft.com/en-us/dotnet/core/install/linux
 
@@ -24,16 +25,15 @@ git clone https://github.com/SComps/HerculesBackup.git
 
 <b>cd HerculesBackup
 
-dotnet build
+dotnet publish --self-contained -o {your output directory}
 
-cd HerculesBackup/bin/Debug/net8.0
+cd {your output directory}
 
 ls
 
 </b>
 
-You should see a handful of files, one of which is HerculesBackup.  Copy ALL of the files in this directory
-into your path (or modify your path to include this).   Once you've built the software, and moved it into your path,
+Copy ALL of the files in this directory into your path (or modify your path to include this).   Once you've built the software, and moved it into your path,
 you can execute it using the command line above.
 
 Good luck!
