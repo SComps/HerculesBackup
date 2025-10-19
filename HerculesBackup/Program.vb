@@ -9,10 +9,17 @@ Module Program
     Dim backupdest As String = ""
     Sub Main(args As String())
         Console.WriteLine("Hercules Backup-2024,2025 S Johnson. westdalefarmer@gmail.com")
+        Dim msg As String =
+            "You must specify exactly three parameters." & vbCrLf &
+            "HerculesBackup <copies> <source dasd dir> <backup destination>" & vbCr & vbCr &
+            "<copies> is how many numbered rotations you want." & vbCr &
+            "<source dasd dir> is the directory that contains the DASD to back up." & vbCr &
+            "<backup destination> is a directory name to store the dasd backup.  This name will" & vbCr &
+            "                     will have the rotation number appended (backupdir.1 etc)" & vbCr & vbCr
+
+
         If args.Count < 3 Then
-            Console.WriteLine("You must specify three parameters.")
-            Console.WriteLine("<copies> <source dasd dir> <backup destination>")
-            End
+            Console.Write(msg)
         Else
             copies = Val(args(0))
             dasdsource = args(1)
